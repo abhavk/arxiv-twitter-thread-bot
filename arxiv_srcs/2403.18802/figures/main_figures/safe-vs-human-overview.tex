@@ -1,0 +1,27 @@
+\begin{wrapfigure}{r}{0.37\linewidth}
+    \vspace{-5mm}
+    \centering
+    \begin{tikzpicture}[scale=0.4]
+        \pie[
+            rotate=90,
+            sum=auto,
+            color={jweigreen!80,darkpastelred!80},
+            text=legend,
+            % hide legend,
+            after number/.style={after number={~(\pgfmathprintnumber{\pgfplotspiepercent}\%)}},
+        ]{
+            11528/Agree,
+            4483/Disagree
+        }
+        % Add labels
+        \node (agr) at (0:0cm) [xshift=-2.7mm, yshift=-5.5mm] {\footnotesize \textcolor{black!80}{(72\%)}};
+        \node (dis) at (0:0cm) [xshift=5.2mm, yshift=1.2mm] {\footnotesize \textcolor{black!80}{(28\%)}};
+        % Add title
+        \node[above=16mm,right=0.1mm]{\hspace{-13mm}\textbf{\safe{} vs. human annotations.}};
+    \end{tikzpicture}
+    \caption{
+        On a set of 16,011 individual facts, \safe{} annotations agree with 72.0\% of human annotations.
+    }
+    \label{fig:safe-vs-human-overview}
+    \vspace{-4mm}
+\end{wrapfigure}

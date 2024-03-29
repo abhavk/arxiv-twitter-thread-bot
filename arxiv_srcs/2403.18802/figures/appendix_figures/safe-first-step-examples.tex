@@ -1,0 +1,52 @@
+\begin{table}[ht]
+    \centering
+    \small
+    \begin{tabular}{l|l}
+        \toprule
+            Sentence & Individual facts \\
+        \midrule
+            \makecell[l]{
+                Neumann has cited the rise of Pauline Hanson\\
+                in his home town of Ipswich as his motivation\\
+                for entering politics[1].
+            } & \makecell[l]{
+                ``Neumann has cited the rise of Pauline Hanson.''\\
+                ``Neumann's home town is Ipswich.''\\
+                ``Neumann entered politics.''\\
+                ``Neumann's motivation for entering politics was\\
+                the rise of Pauline Hanson in Ipswich.''
+            } \\
+        \midrule
+            \makecell[l]{
+                She also starred in the Broadway musicals\\
+                Wonderful Town (1953) and Follies (1971).
+            } & \makecell[l]{
+                ``She starred in Wonderful Town.''\\
+                ``Wonderful Town is a Broadway musical.''\\
+                ``Wonderful Town premiered in 1953.''\\
+                ``She starred in Follies.''\\
+                ``Follies is a Broadway musical.''\\
+                ``Follies premiered in 1971.''
+            } \\
+        \midrule
+            \makecell[l]{
+                She is also a successful producer, having\\
+                produced films such as 12 Strong and\\
+                Extinction.
+            } & \makecell[l]{
+                ``She is successful.''\\
+                ``She is a producer.''\\
+                ``She has produced films.''\\
+                ``12 Strong is a film.''\\
+                ``Extinction is a film.''\\
+                ``She has produced 12 Strong.''\\
+                ``She has produced Extinction.''
+            } \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        Randomly-selected examples of sentences inputted to \safe{} and individual facts extracted by \safe{}.
+        Responses are split into sentences programatically using the NLTK sentence tokenizer, following \citet{min2023factscore}, as described in \cref{sec:safe-implementation}.
+    }
+    \label{tab:safe-first-step-examples}
+\end{table}

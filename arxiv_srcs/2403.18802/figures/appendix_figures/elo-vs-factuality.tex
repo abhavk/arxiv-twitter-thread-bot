@@ -1,0 +1,101 @@
+\begin{wrapfigure}{r}{0.35\linewidth}
+    \vspace{-4mm}
+    \begin{centering}
+        \begin{tikzpicture}
+            \pgfplotsset{footnotesize,samples=10}
+            \begin{groupplot}[
+                group style = {group size = 3 by 1, horizontal sep = 20pt, vertical sep = 15pt},
+                width = \linewidth, 
+                height = \linewidth,
+            ]
+            \nextgroupplot[
+                align = center,
+                legend style={at={(-0.12,1.4)},anchor=south},
+                xmin=1090, xmax=1260,
+                ymin=55, ymax=105,
+                xtick={1100, 1150, 1200, 1250},
+                xticklabels={1100, 1150, 1200, 1250},
+                xticklabel style = {font=\small},
+                axis x line*=bottom,
+                axis y line*=left,
+                xlabel={Chatbot Arena ELO},
+                ylabel={Long-form factuality (\%)},
+                ytick={60, 70, 80, 90, 100},
+                yticklabels={60, 70, 80, 90, 100},
+                grid style=dashed,
+                x label style={at={(axis description cs:0.5,-0.16)},anchor=north},
+                y label style={at={(axis description cs:-0.2,0.5)},anchor=south,font=\normalsize},
+                xtick pos=bottom,
+                ytick pos=left,
+                legend cell align=left,
+                    legend style={
+                            at={(-0.1,-0.4)},
+                            anchor=west,
+                            column sep=1ex,
+                            font=\small,
+                            draw=none,
+                            legend columns=2,
+                    }
+                ]
+                \addplot[
+                    color=frenchbeige,
+                    only marks,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1115, 67.9)  % Claude-2.1
+                    (1126, 68.7)  % Claude-2.0
+                    (1096, 79.6)  % GPT-3.5-Turbo-0125
+                    (1118, 83.7)  % Gemini-Pro
+                    (1159, 88.0)  % GPT-4-0613
+                    (1247, 89.3)  % Claude-3-Opus
+                    (1190, 89.4)  % Claude-3-Sonnet
+                    (1249, 95.0)  % GPT-4-Turbo-0125
+                };
+                \addlegendentry{\metricat{64}\ \ \ \ \ \ \ \ }
+                \addplot[
+                    color=frenchblue,
+                    only marks,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1115, 84.8)  % Claude-2.1
+                    (1126, 85.5)  % Claude-2.0
+                    (1096, 90.8)  % GPT-3.5-Turbo-0125
+                    (1118, 82.0)  % Gemini-Pro
+                    (1159, 89.4)  % GPT-4-0613
+                    (1247, 88.5)  % Claude-3-Opus
+                    (1190, 88.5)  % Claude-3-Sonnet
+                    (1249, 91.7)  % GPT-4-Turbo-0125
+                };
+                \addlegendentry{Precision\ \ \ \ \ \ \ \ }
+                \addplot[
+                    color=frenchbeige,
+                    mark=none,
+                ]
+                coordinates {  % y = 0.12461586951382893x + -62.165948309826085
+                    (1090, 73.67)
+                    (1260, 94.85)
+                };
+                \addplot[
+                    color=frenchblue,
+                    mark=none,
+                ]
+                coordinates {  % y = 0.027389488613978413x + 55.80971948625011
+                    (1090, 85.67)
+                    (1260, 90.32)
+                };
+            \end{groupplot}
+        \end{tikzpicture}
+    \end{centering}
+    \vspace{-5mm}
+    \caption{
+       While a model's average precision does not obtain statistically-significant correlation with its Chatbot Arena ELO, its average \metricat{64} does achieve statistically-significant correlation with its ELO.
+       Lines are lines of best fit using \texttt{np.polyfit}.
+       ELO scores recorded on March 18, 2024.
+    }
+    \label{fig:elo-vs-factuality}
+    \vspace{-4mm}
+\end{wrapfigure}

@@ -1,0 +1,69 @@
+% Customized paragraph start
+\newcommand{\myparagraph}[1]{\noindent\textbf{#1.}\,}
+
+% Drafting notes
+\newcommand{\jerry}[1]{\textcolor{blue}{\bf \small [Jerry: #1]}}
+\newcommand{\nathan}[1]{\textcolor{purple}{\bf \small [Nathan: #1]}}
+\newcommand{\chengrun}[1]{\textcolor{burntorange}{\bf \small [Chengrun: #1]}}
+\newcommand{\yifeng}[1]{\textcolor{green}{\bf \small [Yifeng: #1]}}
+
+% Model shortcuts
+\newcommand{\gpt}[0]{GPT}
+\newcommand{\gptfourturbofullnormal}[0]{GPT-4-0125-Preview}
+\newcommand{\gptfourturbofull}[0]{\texttt{\MakeLowercase{\gptfourturbofullnormal{}}}}
+\newcommand{\gptfourturbo}[0]{GPT-4-Turbo}
+\newcommand{\gptfourfullnormal}[0]{GPT-4-0613}
+\newcommand{\gptfourfull}[0]{\texttt{\MakeLowercase{\gptfourfullnormal{}}}}
+\newcommand{\gptfour}[0]{GPT-4}
+\newcommand{\chatgptfullnormal}[0]{GPT-3.5-Turbo-0125}
+\newcommand{\chatgptfull}[0]{\texttt{\MakeLowercase{\chatgptfullnormal{}}}}
+\newcommand{\chatgpt}[0]{GPT-3.5-Turbo}
+\newcommand{\claude}[0]{Claude}
+\newcommand{\claudeopusfullnormal}[0]{Claude-3-Opus-20240229}
+\newcommand{\claudeopusfull}[0]{\texttt{\MakeLowercase{\claudeopusfullnormal{}}}}
+\newcommand{\claudeopus}[0]{Claude-3-Opus}
+\newcommand{\claudesonnetfullnormal}[0]{Claude-3-Sonnet-20240229}
+\newcommand{\claudesonnetfull}[0]{\texttt{\MakeLowercase{\claudesonnetfullnormal{}}}}
+\newcommand{\claudesonnet}[0]{Claude-3-Sonnet}
+\newcommand{\claudehaikufullnormal}[0]{Claude-3-Haiku-20240307}
+\newcommand{\claudehaikufull}[0]{\texttt{\MakeLowercase{\claudehaikufullnormal{}}}}
+\newcommand{\claudehaiku}[0]{Claude-3-Haiku}
+\newcommand{\claudetwopointone}[0]{Claude-2.1}
+\newcommand{\claudetwo}[0]{Claude-2.0}
+\newcommand{\claudeinstantfullnormal}[0]{Claude-Instant-1.2}
+\newcommand{\claudeinstantfull}[0]{\texttt{\MakeLowercase{\claudeinstantfullnormal{}}}}
+\newcommand{\claudeinstant}[0]{Claude-Instant}
+\newcommand{\ulm}[0]{PaLM-2}
+\newcommand{\ulmlitrlhf}[0]{PaLM-2-L-IT-RLHF}
+\newcommand{\ulmlit}[0]{PaLM-2-L-IT}
+\newcommand{\gemini}[0]{Gemini}
+\newcommand{\geminiultra}[0]{Gemini-Ultra}
+\newcommand{\geminipro}[0]{Gemini-Pro}
+
+% Dataset shortcuts
+\newcommand{\longfact}[0]{LongFact}
+\newcommand{\longfactconcepts}[0]{LongFact-Concepts}
+\newcommand{\longfactobjects}[0]{LongFact-Objects}
+\newcommand{\longfacturl}[0]{\url{https://github.com/google-deepmind/long-form-factuality/tree/main/longfact}}
+
+% Eval shortcuts
+\newcommand{\safe}[0]{SAFE}
+\newcommand{\safelong}[0]{Search-Augmented Factuality Evaluator}
+\newcommand{\safeurl}[0]{\url{https://github.com/google-deepmind/long-form-factuality/tree/main/eval/safe}}
+
+% Method shortcuts
+\newcommand{\vanillaprompting}[0]{Standard prompting}
+\newcommand{\vanillapromptinglower}[0]{\MakeLowercase{\vanillaprompting{}}}
+
+% Metric shortcuts
+\newcommand{\metric}[0]{$F_1 @ K$}
+\newcommand{\metricshort}[0]{$F_1$}
+\newcommand{\metricat}[1]{\metricshort{}@$#1$}
+
+% Paper title
+\newcommand{\papertitle}[0]{\vspace{-2mm}Long-form factuality in large language models}
+
+% Other
+\newcommand{\githuburl}[0]{\url{https://github.com/google-deepmind/long-form-factuality}}
+\newcommand{\codeblock}[0]{\textasciigrave\textasciigrave\textasciigrave}
+\newcommand{\squarebrackets}[1]{[#1]}

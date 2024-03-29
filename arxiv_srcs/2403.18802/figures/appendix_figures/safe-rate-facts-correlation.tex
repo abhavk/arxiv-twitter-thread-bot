@@ -1,0 +1,18 @@
+\begin{table}[ht]
+    \centering
+    \small
+    \begin{tabular}{l | c c}
+        \toprule
+                    & \multicolumn{2}{c}{\textbf{Correlation}}  \\
+                \textbf{Response-level metric} & Pearson & Spearman \\
+        \midrule
+            \# supported facts & $r = 0.912$ ($p = 7.8\times 10^{-194}$) & $r = 0.899$ ($p = 9.3 \times 10^{-180}$) \\
+            \# not-supported facts & $r = 0.662$ ($p = 6.3 \times 10^{-64}$) & $r = 0.674$ ($p = 5.5 \times 10^{-67}$) \\
+            \# irrelevant facts & $r = 0.313$ ($p = 9.6 \times 10^{-13}$) & $r = 0.006$ ($p = 9.0 \times 10^{-1}$) \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        Response-level correlation between \safe{} and human annotators for labeling the fixed set of individual facts for each prompt--response pair from \citet{min2023factscore}.
+    }
+    \label{tab:rate-facts-correlation}
+\end{table}

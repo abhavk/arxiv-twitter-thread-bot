@@ -1,0 +1,16 @@
+\begin{minipage}[t]{\linewidth}
+    \vspace{-2mm}
+    \begin{equation}
+        F_1 @ K (y) = 
+        \begin{cases}
+            \frac{2\text{Prec}(y) R_K(y)}{\text{Prec}(y) + R_K(y)},  & \text{if } S(y) > 0,\\
+            0,                 & \text{if } S(y) = 0.
+        \end{cases}
+        \label{eq:metric-equation}
+    \end{equation}
+    % Caption
+    \cref{eq:metric-equation}: \metric{} measures the long-form factuality of a model response $y$ given the number of supported facts $S(y)$ and the number of not-supported facts $N(y)$ that are in $y$.
+    The hyperparameter $K$ indicates the number of supported facts required for a response to achieve full recall.
+    We discuss how $K$ should be selected in \cref{sec:appendix-how-should-k-be-selected}.
+    \vspace{-4mm}
+\end{minipage}

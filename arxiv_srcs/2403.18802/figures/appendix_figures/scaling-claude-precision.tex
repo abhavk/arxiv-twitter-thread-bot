@@ -1,0 +1,62 @@
+\begin{wrapfigure}{r}{0.37\linewidth}
+    \vspace{-4mm}
+    \begin{centering}
+        \begin{tikzpicture}
+            \pgfplotsset{footnotesize,samples=10}
+            \begin{groupplot}[
+                group style = {group size = 1 by 1, horizontal sep = 20pt, vertical sep = 15pt},
+                width = \linewidth, 
+                height = \linewidth
+            ]
+            \nextgroupplot[
+                align = center,
+                title = {\textbf{\claude{}}},
+                legend style={at={(-0.12,1.4)},anchor=south},
+                xmin=0.5, xmax=6.5,
+                ymin=78, ymax=102,
+                xtick={1,2,3,4,5,6,7,8,9},
+                xticklabels={I, 2.0, 2.1, 3-H, 3-S, 3-O},
+                xticklabel style = {font=\scriptsize},
+                axis x line*=bottom,
+                axis y line*=left,
+                % xlabel={Model scale},
+                ylabel={Precision (\%)},
+                ytick={80, 85, 90, 95, 100},
+                yticklabels={80, 85, 90, 95, 100},
+                grid style=dashed,
+                x label style={at={(axis description cs:0.5,-0.16)},anchor=north},
+                y label style={at={(axis description cs:-0.2,0.5)},anchor=south,font=\normalsize},
+                xtick pos=bottom,
+                ytick pos=left,
+                legend cell align=left,
+                    legend style={
+                            at={(1.05,0.5)},
+                            anchor=west,
+                            column sep=1ex,
+                            font=\small,
+                            draw=none,
+                    }
+                ]
+                \addplot[
+                    color=claude,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 84.4)
+                    (2, 85.5)
+                    (3, 84.8)
+                    (4, 92.8)
+                    (5, 88.5)
+                    (6, 88.5)
+                };
+            \end{groupplot}
+        \end{tikzpicture}
+    \end{centering}
+    \caption{
+        Claude-3 models achieve higher factual precision on \longfactobjects{} than \claude{} models from previous generations.
+    }
+    \label{fig:scaling-claude-precision}
+    \vspace{-4mm}
+\end{wrapfigure}

@@ -1,0 +1,24 @@
+\begin{wrapfigure}{r}{0.53\linewidth}
+    \vspace{-5mm}
+    \centering
+    \begin{tikzpicture}[scale=0.48]
+        \pie[
+            rotate=90,
+            sum=auto,
+            color={frenchblue!75,frenchrose!75,frenchlilac!75,frenchbeige!75,jweigreen!80},
+            text=legend,
+            after number/.style={after number={~(\pgfmathprintnumber{\pgfplotspiepercent}\%)}},
+        ]{
+            30/Label confusion,
+            22/Information not given,
+            16/Information missed,
+            8/Misread response,
+            5/{Technicality/reasoning}
+        }
+    \end{tikzpicture}
+    \caption{
+        Presumed causes of crowdsourced human annotators giving an incorrect rating on the 100 disagreement examples with ``researcher + full internet access'' ground-truth labels from \cref{sec:safe-outperforms-human-annotators}.
+    }
+    \label{fig:human-annotator-error-cases}
+    \vspace{-4mm}
+\end{wrapfigure}

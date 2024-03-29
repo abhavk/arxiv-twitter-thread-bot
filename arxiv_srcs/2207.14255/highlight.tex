@@ -1,0 +1,208 @@
+%https://tex.stackexchange.com/questions/15237/highlight-text-in-code-listing-while-also-keeping-syntax-highlighting/15257#15257
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{atbegshi}
+\usepackage{ifthen}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+
+\makeatletter
+
+\newcommand\if@empty[1]{%
+    \if\relax\detokenize{#1}\relax
+        \expandafter\@firstoftwo
+    \else
+        \expandafter\@secondoftwo
+    \fi
+}
+
+\newcommand\ifthen[2]{\ifthenelse{#1}{#2}{}}
+\newcommand\ifelse[2]{\ifthenelse{#1}{}{#2}}
+
+% Is highlighting currently active in the listings environment?
+\newif\ifhl@active
+
+% Material executed at each page shipout
+\newtoks\hl@shipout
+
+% Extra styling parameters for the currently active highlight
+\newtoks\hl@parameters
+
+% Inline highlight style. This does not break across line ends
+\newcommand\hl[2][]{\begingroup\hlstyle@start{#1}#2\endgroup}
+
+% The highlight style for listings environments
+\newcommand\hlstyle[1][]{\hlstyle@start{#1}}
+\newcommand\hlstyle@start[1]{%
+    \global\hl@activetrue
+    \aftergroup\hlstyle@end
+    \write\@auxout{\noexpand\hl@setparameters{#1}}%
+    \hl@mark{S}%
+}
+\newcommand\hlstyle@end{%
+    \hl@mark{E}%
+    \global\hl@activefalse
+}
+
+% Sets the current highlight parameters
+\newcommand\hl@setparameters[1]{%
+    \global\hl@parameters={#1}%
+}
+
+% Writes a new node marker with the current position and page number to the .aux file
+\newcommand\hl@mark[1]{%
+    \ensuremath{\vcenter{\hbox{\pdfsavepos}}}%
+    \write\@auxout{\noexpand\hl@processmark{#1}{\the\pdflastxpos}{\the\pdflastypos}{\arabic{page}}}%
+}
+
+% Writes the current page origin to the .aux file, and issues the current \hl@shipout material
+% to be processed
+\AtBeginShipout{\AtBeginShipoutUpperLeft{%
+    \pdfsavepos
+    \write\@auxout{\noexpand\hl@processmark{Z}{\the\pdflastxpos}{\the\pdflastypos}{\arabic{page}}}%
+    \hl@doshipout
+}}
+
+% Maintains the current first and last node positions, checks whether a node marker should be used
+% for the current highlighting segment, and issues a \hl@draw call if necessary.
+% #1 is either 'S' (start node), 'M' (intermediate node), 'E' (end node), or 'Z' (page origin)
+% #2/#3 are the x/y-coordinates, #4 is the page number
+\newcommand\hl@processmark[4]{%
+    \if#1S%
+        \xdef\hl@firstx{#2}%
+        \xdef\hl@firsty{#3}%
+        \xdef\hl@firstp{#4}%
+    \else\if#1M%
+        \ifthenelse{\hl@firsty=#3}{%
+            % Still on same line
+            \xdef\hl@lastx{#2}%
+            \xdef\hl@lasty{#3}%
+        }{%
+            \ifelse{\hl@firstx=\hl@lastx \and \hl@firsty=\hl@lasty}{%
+                % Last highlight part is not empty
+                \expandafter\hl@draw\expandafter{\the\hl@parameters}%
+            }%
+            \xdef\hl@firstx{#2}%
+            \xdef\hl@firsty{#3}%
+            \xdef\hl@firstp{#4}%
+        }%
+    \else\if#1E%
+        \ifthen{\hl@firsty=#3}{%
+            % Still on same line
+            \xdef\hl@lastx{#2}%
+            \xdef\hl@lasty{#3}%
+            \ifelse{\hl@firstx=#2}{%
+                % Last highlight part is not empty
+                \expandafter\hl@draw\expandafter{\the\hl@parameters}%
+            }%
+        }%
+    \else\if#1Z%
+        \xdef\hl@zerox{#2}%
+        \xdef\hl@zeroy{#3}%
+    \fi\fi\fi\fi
+}
+
+% Add a new highlight segment to \hl@shipout to be processed on every shipout.
+% #1 is the styling command used to draw the segment within a properly positioned \tikz call.
+%    If #1 is empty, \hldefaultstyle is used as a default. Every styling command can take
+%    arbitrary parameters, only the last four are mandatory (x_first, y_first, x_last, y_last)
+\newcommand\hl@draw[1]{%
+    \edef\@temp{{\noexpand\tikz [ overlay, shift = {(-\hl@zerox sp, -\hl@zeroy sp)} ]
+        {\if@empty{#1}{\noexpand\hldefaultstyle}{\unexpanded{#1}}%
+            {\hl@firstx sp}{\hl@firsty sp}{\hl@lastx sp}{\hl@lasty sp}}}%
+        {\hl@firstp}%
+    }%
+    \expandafter\global\expandafter\addto@hook\expandafter\hl@shipout\expandafter{\@temp}%
+}
+
+% Processes the current \hl@shipout material. The material is a sequence of
+% {TikZ commands}{page number} pairs
+\def\hl@doshipout{%
+    \expandafter\hl@doshipout@\the\hl@shipout{}{}\@end
+}
+\def\hl@doshipout@#1#2#3\@end{%
+    \if@empty{#2}{}{%
+        \ifthen{\arabic{page}=#2}{#1}%
+        \hl@doshipout@#3\@end
+    }%
+}
+
+% Hook into listings' discretionary breaks
+\let\orig@lst@discretionary=\lst@discretionary
+\gdef\lst@discretionary{%
+    \ifhl@active
+        \hl@mark{M}%
+    \fi
+    \orig@lst@discretionary
+    \ifhl@active
+        \hl@mark{M}%
+    \fi
+}
+
+
+% Styling command for underlined text
+\newcommand\hlunderlinestyle[5][black]{%
+    \draw [ yshift = -0.4\baselineskip, #1 ] (#2, #3) -- (#4, #5);
+}
+
+% Styling command for a simple marker highlights
+\newcommand\hlmarkerstyle[5][yellow]{%
+    \draw [ line width = \baselineskip, #1 ] (#2, #3) -- (#4, #5);
+}
+
+% Styling command for a framed box
+\newcommand\hlboxstyle[5][red]{%
+    \draw let \p1 = (#2, #3), \p2 = (#4, #5)
+          in node [ draw = #1,
+                    fill = #1!10!white,
+                    minimum height = \baselineskip,
+                    fit = (\p1)(\p2),
+                    anchor = west,
+                    align = none,  % prevent underfull node boxes
+                    outer sep = 0pt, inner sep = 0pt ]
+             at (\p1) {};
+}
+
+% Default styling command
+\let\hldefaultstyle=\hlmarkerstyle
+
+\makeatother
+
+
+\newcommand\delimstyleA{\hlstyle[{\hlboxstyle[green]}]}
+\newcommand\delimstyleB{\hlstyle[{\hlboxstyle[green!20, draw=green]}]}
+\newcommand\delimstyleBsm{\hlstyle[{\small\hlboxstyle[green!20, draw=green]}]}
+\newcommand\delimstyleBft{\hlstyle[{\footnotesize\hlboxstyle[green!20, draw=green]}]}
+\newcommand\delimstyleC{\hlstyle[{\hlunderlinestyle[red, line width = 0.8pt]}]}
+
+\lstdefinestyle{python}
+{
+    %language=python,
+    columns=fullflexible,
+    basicstyle={\ttfamily \small},
+    moredelim=**[is][\delimstyleA]{@}{@},
+    moredelim=**[is][\delimstyleBsm]{`}{`},
+    %moredelim=**[is][\delimstyleC]{_}{_},
+    keepspaces,
+    breaklines,
+    breakautoindent=false,
+    breakindent=0pt,
+}
+
+\lstdefinestyle{text}
+{
+    columns=fullflexible,
+    basicstyle={\sffamily \footnotesize},
+    moredelim=**[is][\delimstyleA]{@}{@},
+    moredelim=**[is][\delimstyleBft]{`}{`},
+    %leftmargin=0pt,
+    %itemindent=3ex,
+    %itemsep=-1ex,
+    %moredelim=**[is][\delimstyleC]{_}{_},
+    keepspaces,
+    breaklines,
+    breakautoindent=false,
+    breakindent=0pt,
+}

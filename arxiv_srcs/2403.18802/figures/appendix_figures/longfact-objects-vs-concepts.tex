@@ -1,0 +1,192 @@
+\begin{figure}[ht]
+    \begin{centering}
+        \begin{tikzpicture}
+            \pgfplotsset{footnotesize,samples=10}
+            \begin{groupplot}[
+                group style = {group size = 3 by 1, horizontal sep = 20pt, vertical sep = 15pt},
+                width = .35\linewidth, 
+                height = .35\linewidth,
+            ]
+            \nextgroupplot[
+                align = center,
+                title = {\textbf{\gptfourturbo{}}},
+                legend style={at={(-0.12,1.4)},anchor=south},
+                xmin=-9, xmax=189,
+                ymin=-5, ymax=105,
+                xtick={0, 45, 90, 135, 180},
+                xticklabels={0, 45, 90, 135, 180},
+                xticklabel style = {font=\small},
+                axis x line*=bottom,
+                axis y line*=left,
+                xlabel={$K$},
+                ylabel={\metric{} (\%)},
+                ytick={0, 20, 40, 60, 80, 100},
+                yticklabels={0, 20, 40, 60, 80, 100},
+                grid style=dashed,
+                x label style={at={(axis description cs:0.5,-0.16)},anchor=north},
+                y label style={at={(axis description cs:-0.2,0.5)},anchor=south,font=\normalsize},
+                xtick pos=bottom,
+                ytick pos=left,
+                legend cell align=left,
+                    legend style={
+                            at={(0.55,-0.4)},
+                            anchor=west,
+                            column sep=1ex,
+                            font=\small,
+                            draw=none,
+                            legend columns=2,
+                    }
+                ]
+                \addplot[
+                    color=frenchbeige,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 97.8)
+                    (48, 97.8)
+                    (64, 97.8)
+                    (84, 97.6)
+                    (131, 88.3)
+                    (178, 74.2)
+                };
+                \addlegendentry{\longfactconcepts{}\ \ \ \ \ \ \ \ }
+                \addplot[
+                    color=frenchblue,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 96.4)
+                    (48, 93.0)
+                    (64, 87.7)
+                    (84, 79.7)
+                    (131, 61.9)
+                    (178, 50.2)
+                };
+                \addlegendentry{\longfactobjects{}}
+            \nextgroupplot[
+                align = center,
+                title = {\textbf{\claudeopus{}}},
+                legend style={at={(-0.12,1.4)},anchor=south},
+                xmin=-9, xmax=189,
+                ymin=-5, ymax=105,
+                xtick={0, 45, 90, 135, 180},
+                xticklabels={0, 45, 90, 135, 180},
+                xticklabel style = {font=\small},
+                axis x line*=bottom,
+                axis y line*=left,
+                xlabel={$K$},
+                % ylabel={\metric{} (\%)},
+                ytick={0, 20, 40, 60, 80, 100},
+                yticklabels={0, 20, 40, 60, 80, 100},
+                grid style=dashed,
+                x label style={at={(axis description cs:0.5,-0.16)},anchor=north},
+                y label style={at={(axis description cs:-0.2,0.5)},anchor=south,font=\normalsize},
+                xtick pos=bottom,
+                ytick pos=left,
+                legend cell align=left,
+                    legend style={
+                            at={(0.50,-0.4)},
+                            anchor=west,
+                            column sep=1ex,
+                            font=\small,
+                            draw=none,
+                            legend columns=2,
+                    }
+                ]
+                \addplot[
+                    color=frenchbeige,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 97.8)
+                    (48, 97.7)
+                    (64, 97.0)
+                    (84, 94.1)
+                    (131, 79.8)
+                    (178, 66.7)
+                };
+                \addplot[
+                    color=frenchblue,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 95.9)
+                    (48, 87.5)
+                    (64, 75.7)
+                    (84, 64.2)
+                    (131, 47.3)
+                    (178, 37.4)
+                };
+            \nextgroupplot[
+                align = center,
+                title = {\textbf{\ulmlitrlhf{}}},
+                legend style={at={(-0.12,1.4)},anchor=south},
+                xmin=-9, xmax=189,
+                ymin=-5, ymax=105,
+                xtick={0, 45, 90, 135, 180},
+                xticklabels={0, 45, 90, 135, 180},
+                xticklabel style = {font=\small},
+                axis x line*=bottom,
+                axis y line*=left,
+                xlabel={$K$},
+                ytick={0, 20, 40, 60, 80, 100},
+                yticklabels={0, 20, 40, 60, 80, 100},
+                grid style=dashed,
+                x label style={at={(axis description cs:0.5,-0.16)},anchor=north},
+                y label style={at={(axis description cs:-0.2,0.5)},anchor=south,font=\normalsize},
+                xtick pos=bottom,
+                ytick pos=left,
+                legend cell align=left,
+                    legend style={
+                            at={(0.50,-0.4)},
+                            anchor=west,
+                            column sep=1ex,
+                            font=\small,
+                            draw=none,
+                            legend columns=2,
+                    }
+                ]
+                \addplot[
+                    color=frenchbeige,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 97.6)
+                    (48, 97.5)
+                    (64, 96.5)
+                    (84, 92.1)
+                    (131, 75.8)
+                    (178, 62.6)
+                };
+                \addplot[
+                    color=frenchblue,
+                    line width=1pt,
+                    mark=*,
+                    mark size=1.5pt,
+                ]
+                coordinates {
+                    (1, 94.8)
+                    (48, 92.1)
+                    (64, 85.5)
+                    (84, 75.1)
+                    (131, 57.1)
+                    (178, 46.0)
+                };
+            \end{groupplot}
+        \end{tikzpicture}
+    \end{centering}
+    \caption{
+        Language models obtain better long-form factuality on \longfactconcepts{} compared to \longfactobjects{} for all $K$ used to calculate \metric{}.
+    }
+    \label{fig:longfact-objects-vs-concepts}
+\end{figure}

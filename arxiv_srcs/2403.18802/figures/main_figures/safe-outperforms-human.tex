@@ -1,0 +1,92 @@
+\begin{figure}[t]
+    \vspace{-2mm}
+    \centering
+    \begin{minipage}{\linewidth}
+    \centering
+    \small
+    \begin{adjustbox}{valign=c}
+    \begin{tikzpicture}[scale=0.4]
+        \pie[
+            rotate=90,
+            sum=auto,
+            color={jweigreen!80,darkpastelred!80,bananayellow},
+            text=legend,
+            after number/.style={after number={~(\pgfmathprintnumber{\pgfplotspiepercent}\%)}},
+        ]{
+            76/SAFE,
+            19/Human,
+            5/Neither
+        }
+        % Add title
+        \node[above=17mm,right=-8mm]{\textbf{Disagreement case wins.}};
+    \end{tikzpicture}
+    \end{adjustbox}
+    \small
+    \begin{adjustbox}{valign=c}
+    \hspace{10mm}
+    \pgfplotsset{
+        width=0.25\linewidth, 
+        height=0.3\linewidth,
+        /pgfplots/ybar legend/.style={
+            /pgfplots/legend image code/.code={
+                \draw[##1,/tikz/.cd,yshift=-0.25em]
+                (0cm,0cm) rectangle (7pt,0.8em);
+            },
+        },
+    }
+    \begin{tikzpicture}
+        \begin{groupplot}[
+            group style={group name=plot,group size=1 by 1},
+        ]
+            \nextgroupplot[
+                ybar stacked,
+                ymin=0, ymax=4,
+                ytick={0, 1, 2, 3, 4},
+                major x tick style = transparent,
+                bar width=15pt,
+                enlarge x limits=0.4,
+                typeset ticklabels with strut,
+                ylabel={Annotation cost (\$)},
+                symbolic x coords={Human, \safe{}},
+                xtick=data,  
+                axis x line*=bottom,
+                axis y line*=none,
+                % y label style={at={(axis description cs:-0.04,0.5)},anchor=south},
+                tick label style={font=\small},
+                % xticklabel=\empty,
+                title style={yshift=-4pt},
+                legend cell align=left,
+                    legend style={
+                            at={(1.5,0.7)},
+                            anchor=north,
+                            column sep=1ex,
+                            font=\small,
+                            draw=none,
+                            legend columns=1,
+                    },
+                ]  
+                \addplot+[ybar, fill=frenchbeige, draw=black, postaction={}] coordinates {
+                    (Human, 0.0)
+                    (\safe{}, 0.13)
+                };
+                \addlegendentry{LLM calls}
+                \addplot+[ybar, fill=frenchlilac, draw=black, postaction={}] coordinates {
+                    (Human, 0.0)
+                    (\safe{}, 0.07)
+                };
+                \addlegendentry{Google Search calls}
+                \addplot+[ybar, fill=frenchblue, draw=black, postaction={}] coordinates {
+                    (Human, 4.0)
+                };
+        \end{groupplot}
+    \end{tikzpicture}
+    \end{adjustbox}
+    \end{minipage}
+    \caption{
+        \safe{} outperforms human annotators while being more than 20$\times$ cheaper.
+        Left: on a randomly-sampled subset of 100 individual facts where the annotation from \safe{} and humans disagreed, \safe{} annotations were correct 76\% of the time (we use ``researcher + full internet access'' labels as the ground truth).
+        Right: rating a single model response costs \$4.00 using human annotations \citep{min2023factscore}, compared to \$0.19 using \safe{} configured with \chatgpt{} and Serper API.
+    }
+    \label{fig:safe-outperforms-humans}
+    \vspace{-3mm}
+\end{figure}

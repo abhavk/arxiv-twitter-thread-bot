@@ -1,0 +1,456 @@
+\begin{thebibliography}{53}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aghajanyan et~al.(2021)Aghajanyan, Okhonko, Lewis, Joshi, Xu, Ghosh,
+  and Zettlemoyer]{htlm}
+A.~Aghajanyan, D.~Okhonko, M.~Lewis, M.~Joshi, H.~Xu, G.~Ghosh, and
+  L.~Zettlemoyer.
+\newblock {HTLM:} hyper-text pre-training and prompting of language models.
+\newblock \emph{CoRR}, abs/2107.06955, 2021.
+\newblock URL \url{https://arxiv.org/abs/2107.06955}.
+
+\bibitem[Aghajanyan et~al.(2022)Aghajanyan, Huang, Ross, Karpukhin, Xu, Goyal,
+  Okhonko, Joshi, Ghosh, Lewis, and Zettlemoyer]{cm3}
+A.~Aghajanyan, B.~Huang, C.~Ross, V.~Karpukhin, H.~Xu, N.~Goyal, D.~Okhonko,
+  M.~Joshi, G.~Ghosh, M.~Lewis, and L.~Zettlemoyer.
+\newblock {CM3:} {A} causal masked multimodal model of the internet.
+\newblock \emph{CoRR}, abs/2201.07520, 2022.
+\newblock URL \url{https://arxiv.org/abs/2201.07520}.
+
+\bibitem[Artetxe et~al.(2022)Artetxe, Du, Goyal, Zettlemoyer, and
+  Stoyanov]{bidirlm}
+M.~Artetxe, J.~Du, N.~Goyal, L.~Zettlemoyer, and V.~Stoyanov.
+\newblock On the role of bidirectionality in language model pre-training, 2022.
+\newblock URL \url{https://arxiv.org/abs/2205.11726}.
+
+\bibitem[Bisk et~al.(2020)Bisk, Zellers, Bras, Gao, and Choi]{piqa}
+Y.~Bisk, R.~Zellers, R.~L. Bras, J.~Gao, and Y.~Choi.
+\newblock Piqa: Reasoning about physical commonsense in natural language.
+\newblock In \emph{Thirty-Fourth AAAI Conference on Artificial Intelligence},
+  2020.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, et~al.]{gpt3}
+T.~B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock \emph{arXiv preprint
+  \href{https://arxiv.org/pdf/2005.14165.pdf}{\color{cyan}arXiv:2005.14165}},
+  2020.
+
+\bibitem[Chan et~al.(2019)Chan, Kitaev, Guu, Stern, and Uszkoreit]{kermit}
+W.~Chan, N.~Kitaev, K.~Guu, M.~Stern, and J.~Uszkoreit.
+\newblock {KERMIT:} generative insertion-based modeling for sequences.
+\newblock \emph{CoRR}, abs/1906.01604, 2019.
+\newblock URL \url{http://arxiv.org/abs/1906.01604}.
+
+\bibitem[Chen et~al.(2021)Chen, Tworek, Jun, Yuan, de~Oliveira~Pinto, Kaplan,
+  Edwards, Burda, Joseph, Brockman, Ray, Puri, Krueger, Petrov, Khlaaf, Sastry,
+  Mishkin, Chan, Gray, Ryder, Pavlov, Power, Kaiser, Bavarian, Winter, Tillet,
+  Such, Cummings, Plappert, Chantzis, Barnes, Herbert{-}Voss, Guss, Nichol,
+  Paino, Tezak, Tang, Babuschkin, Balaji, Jain, Saunders, Hesse, Carr, Leike,
+  Achiam, Misra, Morikawa, Radford, Knight, Brundage, Murati, Mayer, Welinder,
+  McGrew, Amodei, McCandlish, Sutskever, and Zaremba]{codex}
+M.~Chen, J.~Tworek, H.~Jun, Q.~Yuan, H.~P. de~Oliveira~Pinto, J.~Kaplan,
+  H.~Edwards, Y.~Burda, N.~Joseph, G.~Brockman, A.~Ray, R.~Puri, G.~Krueger,
+  M.~Petrov, H.~Khlaaf, G.~Sastry, P.~Mishkin, B.~Chan, S.~Gray, N.~Ryder,
+  M.~Pavlov, A.~Power, L.~Kaiser, M.~Bavarian, C.~Winter, P.~Tillet, F.~P.
+  Such, D.~Cummings, M.~Plappert, F.~Chantzis, E.~Barnes, A.~Herbert{-}Voss,
+  W.~H. Guss, A.~Nichol, A.~Paino, N.~Tezak, J.~Tang, I.~Babuschkin, S.~Balaji,
+  S.~Jain, W.~Saunders, C.~Hesse, A.~N. Carr, J.~Leike, J.~Achiam, V.~Misra,
+  E.~Morikawa, A.~Radford, M.~Knight, M.~Brundage, M.~Murati, K.~Mayer,
+  P.~Welinder, B.~McGrew, D.~Amodei, S.~McCandlish, I.~Sutskever, and
+  W.~Zaremba.
+\newblock Evaluating large language models trained on code.
+\newblock \emph{CoRR}, abs/2107.03374, 2021.
+\newblock URL \url{https://arxiv.org/abs/2107.03374}.
+
+\bibitem[Choi et~al.(2018)Choi, He, Iyyer, Yatskar, Yih, Choi, Liang, and
+  Zettlemoyer]{quac}
+E.~Choi, H.~He, M.~Iyyer, M.~Yatskar, W.-t. Yih, Y.~Choi, P.~Liang, and
+  L.~Zettlemoyer.
+\newblock {Q}u{AC}: Question answering in context.
+\newblock In \emph{Proceedings of the 2018 Conference on Empirical Methods in
+  Natural Language Processing}, pages 2174--2184, Brussels, Belgium, Oct.-Nov.
+  2018. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/D18-1241}.
+\newblock URL \url{https://aclanthology.org/D18-1241}.
+
+\bibitem[Chowdhery et~al.(2022)Chowdhery, Narang, Devlin, Bosma, Mishra,
+  Roberts, Barham, Chung, Sutton, Gehrmann, et~al.]{palm}
+A.~Chowdhery, S.~Narang, J.~Devlin, M.~Bosma, G.~Mishra, A.~Roberts, P.~Barham,
+  H.~W. Chung, C.~Sutton, S.~Gehrmann, et~al.
+\newblock Palm: Scaling language modeling with pathways.
+\newblock \emph{arXiv preprint arXiv:2204.02311}, 2022.
+
+\bibitem[Dai et~al.(2019)Dai, Yang, Yang, Carbonell, Le, and Salakhutdinov]{xl}
+Z.~Dai, Z.~Yang, Y.~Yang, J.~Carbonell, Q.~Le, and R.~Salakhutdinov.
+\newblock Transformer-{XL}: Attentive language models beyond a fixed-length
+  context.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics}, pages 2978--2988, Florence, Italy, July 2019.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P19-1285}.
+\newblock URL \url{https://aclanthology.org/P19-1285}.
+
+\bibitem[Deng et~al.(2021)Deng, Su, Lees, Wu, Yu, and Sun]{reasonbert}
+X.~Deng, Y.~Su, A.~Lees, Y.~Wu, C.~Yu, and H.~Sun.
+\newblock Reasonbert: Pre-trained to reason with distant supervision.
+\newblock \emph{CoRR}, abs/2109.04912, 2021.
+\newblock URL \url{https://arxiv.org/abs/2109.04912}.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{bert}
+J.~Devlin, M.~Chang, K.~Lee, and K.~Toutanova.
+\newblock {BERT:} pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In J.~Burstein, C.~Doran, and T.~Solorio, editors, \emph{Proceedings
+  of the 2019 Conference of the North American Chapter of the Association for
+  Computational Linguistics: Human Language Technologies, {NAACL-HLT} 2019,
+  Minneapolis, MN, USA, June 2-7, 2019, Volume 1 (Long and Short Papers)},
+  pages 4171--4186. Association for Computational Linguistics, 2019.
+\newblock \doi{10.18653/v1/n19-1423}.
+\newblock URL \url{https://doi.org/10.18653/v1/n19-1423}.
+
+\bibitem[Donahue et~al.(2020)Donahue, Lee, and Liang]{donahue}
+C.~Donahue, M.~Lee, and P.~Liang.
+\newblock Enabling language models to fill in the blanks.
+\newblock \emph{CoRR}, abs/2005.05339, 2020.
+\newblock URL \url{https://arxiv.org/abs/2005.05339}.
+
+\bibitem[Du et~al.(2021)Du, Huang, Dai, Tong, Lepikhin, Xu, Krikun, Zhou, Yu,
+  Firat, et~al.]{glam}
+N.~Du, Y.~Huang, A.~M. Dai, S.~Tong, D.~Lepikhin, Y.~Xu, M.~Krikun, Y.~Zhou,
+  A.~W. Yu, O.~Firat, et~al.
+\newblock Glam: Efficient scaling of language models with mixture-of-experts.
+\newblock \emph{arXiv preprint arXiv:2112.06905}, 2021.
+
+\bibitem[Du et~al.(2022)Du, Qian, Liu, Ding, Qiu, Yang, and Tang]{glm}
+Z.~Du, Y.~Qian, X.~Liu, M.~Ding, J.~Qiu, Z.~Yang, and J.~Tang.
+\newblock {GLM}: General language model pretraining with autoregressive blank
+  infilling.
+\newblock In \emph{Proceedings of the 60th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 320--335,
+  Dublin, Ireland, May 2022. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2022.acl-long.26}.
+\newblock URL \url{https://aclanthology.org/2022.acl-long.26}.
+
+\bibitem[Dua et~al.(2019)Dua, Wang, Dasigi, Stanovsky, Singh, and
+  Gardner]{drop}
+D.~Dua, Y.~Wang, P.~Dasigi, G.~Stanovsky, S.~Singh, and M.~Gardner.
+\newblock {DROP}: A reading comprehension benchmark requiring discrete
+  reasoning over paragraphs.
+\newblock In \emph{Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 2368--2378,
+  Minneapolis, Minnesota, June 2019. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/N19-1246}.
+\newblock URL \url{https://aclanthology.org/N19-1246}.
+
+\bibitem[Fedus et~al.(2018)Fedus, Goodfellow, and Dai]{maskgan}
+W.~Fedus, I.~Goodfellow, and A.~M. Dai.
+\newblock Maskgan: Better text generation via filling in the\_\_\_\_\_\_, 2018.
+\newblock URL \url{https://arxiv.org/abs/1801.07736}.
+
+\bibitem[Fried et~al.(2022)Fried, Aghajanyan, Lin, Wang, Wallace, Shi, Zhong,
+  Yih, Zettlemoyer, and Lewis]{incoder}
+D.~Fried, A.~Aghajanyan, J.~Lin, S.~Wang, E.~Wallace, F.~Shi, R.~Zhong, W.-t.
+  Yih, L.~Zettlemoyer, and M.~Lewis.
+\newblock Incoder: A generative model for code infilling and synthesis, 2022.
+\newblock URL \url{https://arxiv.org/abs/2204.05999}.
+
+\bibitem[Gu et~al.(2019)Gu, Liu, and Cho]{indigo}
+J.~Gu, Q.~Liu, and K.~Cho.
+\newblock Insertion-based decoding with automatically inferred generation
+  order.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  7:\penalty0 661--676, 2019.
+\newblock \doi{10.1162/tacl_a_00292}.
+\newblock URL \url{https://aclanthology.org/Q19-1042}.
+
+\bibitem[Hernandez et~al.(2021)Hernandez, Kaplan, Henighan, and
+  McCandlish]{hernandez2021}
+D.~Hernandez, J.~Kaplan, T.~Henighan, and S.~McCandlish.
+\newblock Scaling laws for transfer.
+\newblock \emph{arXiv preprint arXiv:2102.01293}, 2021.
+
+\bibitem[Hoffmann et~al.(2022)Hoffmann, Borgeaud, Mensch, Buchatskaya, Cai,
+  Rutherford, Casas, Hendricks, Welbl, Clark, et~al.]{chinchi}
+J.~Hoffmann, S.~Borgeaud, A.~Mensch, E.~Buchatskaya, T.~Cai, E.~Rutherford,
+  D.~d.~L. Casas, L.~A. Hendricks, J.~Welbl, A.~Clark, et~al.
+\newblock Training compute-optimal large language models.
+\newblock \emph{arXiv preprint arXiv:2203.15556}, 2022.
+
+\bibitem[Holtzman et~al.(2020)Holtzman, Buys, Du, Forbes, and Choi]{nucleus}
+A.~Holtzman, J.~Buys, L.~Du, M.~Forbes, and Y.~Choi.
+\newblock The curious case of neural text degeneration.
+\newblock In \emph{ICLR}. OpenReview.net, 2020.
+\newblock URL
+  \url{http://dblp.uni-trier.de/db/conf/iclr/iclr2020.html#HoltzmanBDFC20}.
+
+\bibitem[Joshi et~al.(2020)Joshi, Chen, Liu, Weld, Zettlemoyer, and
+  Levy]{spanbert}
+M.~Joshi, D.~Chen, Y.~Liu, D.~S. Weld, L.~Zettlemoyer, and O.~Levy.
+\newblock {S}pan{BERT}: Improving pre-training by representing and predicting
+  spans.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  8:\penalty0 64--77, 2020.
+\newblock \doi{10.1162/tacl_a_00300}.
+\newblock URL \url{https://aclanthology.org/2020.tacl-1.5}.
+
+\bibitem[Jun et~al.(2020)Jun, Child, Chen, Schulman, Ramesh, Radford, and
+  Sutskever]{distaug}
+H.~Jun, R.~Child, M.~Chen, J.~Schulman, A.~Ramesh, A.~Radford, and
+  I.~Sutskever.
+\newblock Distribution augmentation for generative modeling.
+\newblock In H.~D. III and A.~Singh, editors, \emph{Proceedings of the 37th
+  International Conference on Machine Learning}, volume 119 of
+  \emph{Proceedings of Machine Learning Research}, pages 5006--5019. PMLR,
+  13--18 Jul 2020.
+\newblock URL \url{https://proceedings.mlr.press/v119/jun20a.html}.
+
+\bibitem[Kaplan et~al.(2020)Kaplan, McCandlish, Henighan, Brown, Chess, Child,
+  Gray, Radford, Wu, and Amodei]{scaling_laws}
+J.~Kaplan, S.~McCandlish, T.~Henighan, T.~B. Brown, B.~Chess, R.~Child,
+  S.~Gray, A.~Radford, J.~Wu, and D.~Amodei.
+\newblock Scaling laws for neural language models.
+\newblock \emph{arXiv preprint arXiv:2001.08361}, 2020.
+
+\bibitem[Keskar et~al.(2019)Keskar, McCann, Varshney, Xiong, and Socher]{ctrl}
+N.~S. Keskar, B.~McCann, L.~R. Varshney, C.~Xiong, and R.~Socher.
+\newblock {CTRL:} {A} conditional transformer language model for controllable
+  generation.
+\newblock \emph{CoRR}, abs/1909.05858, 2019.
+\newblock URL \url{http://arxiv.org/abs/1909.05858}.
+
+\bibitem[Lachaux et~al.(2021)Lachaux, Rozi{\`{e}}re, Szafraniec, and
+  Lample]{dobf}
+M.~Lachaux, B.~Rozi{\`{e}}re, M.~Szafraniec, and G.~Lample.
+\newblock {DOBF:} {A} deobfuscation pre-training objective for programming
+  languages.
+\newblock In M.~Ranzato, A.~Beygelzimer, Y.~N. Dauphin, P.~Liang, and J.~W.
+  Vaughan, editors, \emph{Advances in Neural Information Processing Systems 34:
+  Annual Conference on Neural Information Processing Systems 2021, NeurIPS
+  2021, December 6-14, 2021, virtual}, pages 14967--14979, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/7d6548bdc0082aacc950ed35e91fcccb-Abstract.html}.
+
+\bibitem[Levesque et~al.(2012)Levesque, Davis, and Morgenstern]{winograd}
+H.~J. Levesque, E.~Davis, and L.~Morgenstern.
+\newblock The {Winograd} {Schema} {Challenge}.
+\newblock In \emph{Proceedings of the {Thirteenth} {International} {Conference}
+  on {Principles} of {Knowledge} {Representation} and {Reasoning}}, {KR}'12,
+  pages 552--561. AAAI Press, Rome, Italy, 2012.
+\newblock ISBN 978-1-57735-560-1.
+\newblock URL \url{https://cs.nyu.edu/faculty/davise/papers/WSKR2012.pdf}.
+
+\bibitem[Lewis et~al.(2020)Lewis, Liu, Goyal, Ghazvininejad, Mohamed, Levy,
+  Stoyanov, and Zettlemoyer]{bart}
+M.~Lewis, Y.~Liu, N.~Goyal, M.~Ghazvininejad, A.~Mohamed, O.~Levy, V.~Stoyanov,
+  and L.~Zettlemoyer.
+\newblock {BART}: Denoising sequence-to-sequence pre-training for natural
+  language generation, translation, and comprehension.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}, pages 7871--7880, Online, July 2020.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2020.acl-main.703}.
+\newblock URL \url{https://aclanthology.org/2020.acl-main.703}.
+
+\bibitem[Lieber et~al.(2021)Lieber, Sharir, Lenz, and Shoham]{jur}
+O.~Lieber, O.~Sharir, B.~Lenz, and Y.~Shoham.
+\newblock Jurassic-1: Technical details and evaluation.
+\newblock \emph{White Paper. AI21 Labs}, 2021.
+
+\bibitem[Liu et~al.(2019)Liu, Fu, Liu, and Lv]{tigs}
+D.~Liu, J.~Fu, P.~Liu, and J.~Lv.
+\newblock {TIGS}: An inference algorithm for text infilling with gradient
+  search.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics}, pages 4146--4156, Florence, Italy, July 2019.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P19-1406}.
+\newblock URL \url{https://aclanthology.org/P19-1406}.
+
+\bibitem[Mostafazadeh et~al.(2016)Mostafazadeh, Chambers, He, Parikh, Batra,
+  Vanderwende, Kohli, and Allen]{storycloze}
+N.~Mostafazadeh, N.~Chambers, X.~He, D.~Parikh, D.~Batra, L.~Vanderwende,
+  P.~Kohli, and J.~Allen.
+\newblock A corpus and cloze evaluation for deeper understanding of commonsense
+  stories.
+\newblock In \emph{Proceedings of the 2016 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 839--849, San Diego, California, June 2016. Association
+  for Computational Linguistics.
+\newblock \doi{10.18653/v1/N16-1098}.
+\newblock URL \url{https://aclanthology.org/N16-1098}.
+
+\bibitem[OpenAI et~al.(2022)OpenAI, Bavarian, Jiang, Jun, and
+  Pondé]{edit_insert}
+OpenAI, M.~Bavarian, A.~Jiang, H.~Jun, and H.~Pondé.
+\newblock {New GPT-3 Capabilities: Edit and Insert}.
+\newblock \emph{{OpenAI} blog}, 2022.
+\newblock URL \url{https://openai.com/blog/gpt-3-edit-insert/}.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin,
+  Zhang, Agarwal, Slama, Ray, Schulman, Hilton, Kelton, Miller, Simens, Askell,
+  Welinder, Christiano, Leike, and Lowe]{if}
+L.~Ouyang, J.~Wu, X.~Jiang, D.~Almeida, C.~L. Wainwright, P.~Mishkin, C.~Zhang,
+  S.~Agarwal, K.~Slama, A.~Ray, J.~Schulman, J.~Hilton, F.~Kelton, L.~Miller,
+  M.~Simens, A.~Askell, P.~Welinder, P.~Christiano, J.~Leike, and R.~Lowe.
+\newblock Training language models to follow instructions with human feedback,
+  2022.
+\newblock URL \url{https://arxiv.org/abs/2203.02155}.
+
+\bibitem[Paperno et~al.(2016)Paperno, Kruszewski, Lazaridou, Pham, Bernardi,
+  Pezzelle, Baroni, Boleda, and Fern{\'a}ndez]{lambada}
+D.~Paperno, G.~Kruszewski, A.~Lazaridou, N.~Q. Pham, R.~Bernardi, S.~Pezzelle,
+  M.~Baroni, G.~Boleda, and R.~Fern{\'a}ndez.
+\newblock The {LAMBADA} dataset: Word prediction requiring a broad discourse
+  context.
+\newblock In \emph{Proceedings of the 54th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 1525--1534,
+  Berlin, Germany, Aug. 2016. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P16-1144}.
+\newblock URL \url{https://aclanthology.org/P16-1144}.
+
+\bibitem[Provilkov et~al.(2019)Provilkov, Emelianenko, and Voita]{bpe-dropout}
+I.~Provilkov, D.~Emelianenko, and E.~Voita.
+\newblock Bpe-dropout: Simple and effective subword regularization.
+\newblock \emph{CoRR}, abs/1910.13267, 2019.
+\newblock URL \url{http://arxiv.org/abs/1910.13267}.
+
+\bibitem[Radford et~al.(2018)Radford, Narasimhan, Salimans, and
+  Sutskever]{gpt1}
+A.~Radford, K.~Narasimhan, T.~Salimans, and I.~Sutskever.
+\newblock Improving language understanding by generative pre-training.
+\newblock 2018.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever,
+  et~al.]{gpt2}
+A.~Radford, J.~Wu, R.~Child, D.~Luan, D.~Amodei, I.~Sutskever, et~al.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Rae et~al.(2021)Rae, Borgeaud, Cai, Millican, Hoffmann, Song,
+  Aslanides, Henderson, Ring, Young, et~al.]{gopher}
+J.~W. Rae, S.~Borgeaud, T.~Cai, K.~Millican, J.~Hoffmann, F.~Song,
+  J.~Aslanides, S.~Henderson, R.~Ring, S.~Young, et~al.
+\newblock Scaling language models: Methods, analysis \& insights from training
+  gopher.
+\newblock \emph{arXiv preprint arXiv:2112.11446}, 2021.
+
+\bibitem[Raffel et~al.(2019)Raffel, Shazeer, Roberts, Lee, Narang, Matena,
+  Zhou, Li, and Liu]{T5}
+C.~Raffel, N.~Shazeer, A.~Roberts, K.~Lee, S.~Narang, M.~Matena, Y.~Zhou,
+  W.~Li, and P.~J. Liu.
+\newblock Exploring the limits of transfer learning with a unified text-to-text
+  transformer.
+\newblock \emph{arXiv preprint arXiv:1910.10683}, 2019.
+
+\bibitem[Sakaguchi et~al.(2021)Sakaguchi, Bras, Bhagavatula, and
+  Choi]{winogrande}
+K.~Sakaguchi, R.~L. Bras, C.~Bhagavatula, and Y.~Choi.
+\newblock Winogrande: An adversarial winograd schema challenge at scale.
+\newblock \emph{Commun. ACM}, 64\penalty0 (9):\penalty0 99–106, aug 2021.
+\newblock ISSN 0001-0782.
+\newblock \doi{10.1145/3474381}.
+\newblock URL \url{https://doi.org/10.1145/3474381}.
+
+\bibitem[Shaw et~al.(2018)Shaw, Uszkoreit, and Vaswani]{relattn}
+P.~Shaw, J.~Uszkoreit, and A.~Vaswani.
+\newblock Self-attention with relative position representations.
+\newblock \emph{arXiv preprint arXiv:1803.02155}, 2018.
+
+\bibitem[Shen et~al.(2020)Shen, Quach, Barzilay, and Jaakkola]{blanklm}
+T.~Shen, V.~Quach, R.~Barzilay, and T.~Jaakkola.
+\newblock Blank language models.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 5186--5198, Online, Nov. 2020.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2020.emnlp-main.420}.
+\newblock URL \url{https://aclanthology.org/2020.emnlp-main.420}.
+
+\bibitem[Song et~al.(2019)Song, Tan, Qin, Lu, and Liu]{mass}
+K.~Song, X.~Tan, T.~Qin, J.~Lu, and T.-Y. Liu.
+\newblock Mass: Masked sequence to sequence pre-training for language
+  generation.
+\newblock \emph{arXiv preprint arXiv:1905.02450}, 2019.
+
+\bibitem[Stern et~al.(2019)Stern, Chan, Kiros, and
+  Uszkoreit]{insertion-transformer}
+M.~Stern, W.~Chan, J.~Kiros, and J.~Uszkoreit.
+\newblock Insertion transformer: Flexible sequence generation via insertion
+  operations.
+\newblock In K.~Chaudhuri and R.~Salakhutdinov, editors, \emph{Proceedings of
+  the 36th International Conference on Machine Learning}, volume~97 of
+  \emph{Proceedings of Machine Learning Research}, pages 5976--5985. PMLR,
+  09--15 Jun 2019.
+\newblock URL \url{https://proceedings.mlr.press/v97/stern19a.html}.
+
+\bibitem[Stiennon et~al.(2020)Stiennon, Ouyang, Wu, Ziegler, Lowe, Voss,
+  Radford, Amodei, and Christiano]{rlhf}
+N.~Stiennon, L.~Ouyang, J.~Wu, D.~M. Ziegler, R.~Lowe, C.~Voss, A.~Radford,
+  D.~Amodei, and P.~F. Christiano.
+\newblock Learning to summarize from human feedback.
+\newblock \emph{CoRR}, abs/2009.01325, 2020.
+\newblock URL \url{https://arxiv.org/abs/2009.01325}.
+
+\bibitem[Tay et~al.(2022)Tay, Dehghani, Tran, Garcia, Bahri, Schuster, Zheng,
+  Houlsby, and Metzler]{unifying}
+Y.~Tay, M.~Dehghani, V.~Q. Tran, X.~Garcia, D.~Bahri, T.~Schuster, H.~S. Zheng,
+  N.~Houlsby, and D.~Metzler.
+\newblock Unifying language learning paradigms, 2022.
+\newblock URL \url{https://arxiv.org/abs/2205.05131}.
+
+\bibitem[Thoppilan et~al.(2022)Thoppilan, De~Freitas, Hall, Shazeer,
+  Kulshreshtha, Cheng, Jin, Bos, Baker, Du, et~al.]{lamda}
+R.~Thoppilan, D.~De~Freitas, J.~Hall, N.~Shazeer, A.~Kulshreshtha, H.-T. Cheng,
+  A.~Jin, T.~Bos, L.~Baker, Y.~Du, et~al.
+\newblock Lamda: Language models for dialog applications.
+\newblock \emph{arXiv preprint arXiv:2201.08239}, 2022.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{transformer}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez, L.~u.
+  Kaiser, and I.~Polosukhin.
+\newblock Attention is all you need.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, \emph{Advances in Neural
+  Information Processing Systems}, volume~30. Curran Associates, Inc., 2017.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf}.
+
+\bibitem[Wang et~al.(2022)Wang, Roberts, Hesslow, Scao, Chung, Beltagy, Launay,
+  and Raffel]{huggingface}
+T.~Wang, A.~Roberts, D.~Hesslow, T.~L. Scao, H.~W. Chung, I.~Beltagy,
+  J.~Launay, and C.~Raffel.
+\newblock What language model architecture and pretraining objective work best
+  for zero-shot generalization?, 2022.
+
+\bibitem[Yang et~al.(2019)Yang, Dai, Yang, Carbonell, Salakhutdinov, and
+  Le]{xlnet}
+Z.~Yang, Z.~Dai, Y.~Yang, J.~Carbonell, R.~Salakhutdinov, and Q.~V. Le.
+\newblock \emph{XLNet: Generalized Autoregressive Pretraining for Language
+  Understanding}.
+\newblock Curran Associates Inc., Red Hook, NY, USA, 2019.
+
+\bibitem[Zellers et~al.(2019)Zellers, Holtzman, Bisk, Farhadi, and
+  Choi]{hellaswag}
+R.~Zellers, A.~Holtzman, Y.~Bisk, A.~Farhadi, and Y.~Choi.
+\newblock {H}ella{S}wag: Can a machine really finish your sentence?
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics}, pages 4791--4800, Florence, Italy, July 2019.
+  Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/P19-1472}.
+\newblock URL \url{https://aclanthology.org/P19-1472}.
+
+\bibitem[Zhu et~al.(2019)Zhu, Hu, and Xing]{zhu-infilling}
+W.~Zhu, Z.~Hu, and E.~P. Xing.
+\newblock Text infilling.
+\newblock \emph{CoRR}, abs/1901.00158, 2019.
+\newblock URL \url{http://arxiv.org/abs/1901.00158}.
+
+\end{thebibliography}

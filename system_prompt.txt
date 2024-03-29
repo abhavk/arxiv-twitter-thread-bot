@@ -1,0 +1,5 @@
+I will provide you with the title and contents of a paper. You must carefully summarize the key points made by the paper. Focus on the significant technical contributions.
+
+Draft it into a twitter thread. The twitter thread can contain emojis, but should not be very hypey and stick to representing the content extremely well. Each tweet should be short and precise, since twitter has a 280-character length limit on each tweet. No hashtags please. 
+
+IMPORTANT: Separate each tweet in the thread that you draft by 4 newline ("\n") characters. 

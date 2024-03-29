@@ -1,0 +1,25 @@
+\begin{wrapfigure}{r}{0.45\linewidth}
+    \vspace{-3mm}
+    \centering
+    \begin{tikzpicture}[scale=0.4]
+        \pie[
+            rotate=300,
+            sum=auto,
+            color={frenchblue!75,frenchlilac!75,frenchbeige!75},
+            text=legend,
+            after number/.style={after number={~(\pgfmathprintnumber{\pgfplotspiepercent}\%)}},
+        ]{
+            10/Reasoning error,
+            9/Google Search,
+            5/Revision error
+        }
+    \end{tikzpicture}
+    \caption{
+        Causes of \safe{} returning an incorrect rating on the 100 disagreement examples with ``researcher + full internet access'' ground-truth labels from \cref{sec:safe-outperforms-human-annotators}.
+        ``Reasoning error'': error in the language model's reasoning in either rating a claim as relevant/irrelevant to the prompt or rating a claim as supported/not supported by a set of search results.
+        ``Google Search'': the necessary information to rate the fact was not found in the results from the model's Google Search queries.
+        ``Revision error'': the model did not correctly revise a response to be self-contained.
+    }
+    \label{fig:safe-error-cases}
+    \vspace{-4mm}
+\end{wrapfigure}
